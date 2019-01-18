@@ -33,23 +33,23 @@ getLength(items, function(length) {
 
     // Last item of the array
 function last(arr, cb) {
-  return cb(arr);
+  return cb(arr[arr.length -1]);
   // last passes the last item of the array into the callback.
 }
-
-function lastItem(arr) {
-  return arr[arr.length -1];
-}
-
-console.log(last(items, lastItem));
+last(items, function(lastItem) {
+  console.log(lastItem);
+});
 
 
 
     // Adds two numbers
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
-  return
+  return cb(x+y);
 }
+sumNums(5, 6, function (addition) {
+  console.log(addition);
+});
 
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
