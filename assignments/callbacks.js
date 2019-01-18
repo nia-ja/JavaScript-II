@@ -70,8 +70,20 @@ multiplyNums(5, 6, function (multiply) {
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
-  
+  for (let i=0; list.length > i; i++) {
+    if (list[i] === item) {
+      return cb(true);
+    }
+  }
+  return cb(false);
 }
+contains('Notebook', items, function (ifPresent) {
+  console.log(ifPresent);
+});
+
+
+
+
 
 /* STRETCH PROBLEM */
 
