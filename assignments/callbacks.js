@@ -88,7 +88,20 @@ contains('Notebook', items, function (ifPresent) {
 /* STRETCH PROBLEM */
 
 function removeDuplicates(array, cb) {
+  let noDuplicates = new Set(array);
+  let result = Array.from(noDuplicates);
+  return cb(result);
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
 }
+
+removeDuplicates(items, function(result) {
+  console.log(result);
+})
+
+
+// const items2 = ['Pencil', 'Notebook', 'yo-yo', 'Gum', 'Notebook', 'Pencil'];
+// removeDuplicates(items2, function(result) {
+//   console.log(result);
+// })

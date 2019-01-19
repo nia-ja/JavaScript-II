@@ -33,7 +33,7 @@ console.log(newCounter());
 console.log(newCounter());
 console.log(newCounter());
 console.log(newCounter());
-console.log("end")
+console.log("end");
 
 
 
@@ -106,6 +106,8 @@ myCounter.decrement(); //2
 myCounter.decrement(); //1
 myCounter.decrement(); //0
 myCounter.decrement(); //-1
+console.log("end")
+
 
 
   // Return an object that has two methods called `increment` and `decrement`.
